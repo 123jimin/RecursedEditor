@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel='stylesheet' href="./index.css"/>
+		<script src="../js/jQuery.js"></script>
+		<script src="../js/main.js"></script>
+	</head>
+	<body><div id='root'>
+		<div id='room-display'>
+			<p id='room-display-header'><label for='sel-rooms'>Room</label> <select id='sel-rooms'></select>
+				<button id='btn-rename' title="Rename the selected room">Rename</button>
+				<button id='btn-create' title="Create a new room">Create</button>
+				<button id='btn-delete' title="Delete the selected room">Delete</button><br/>
+				<input type='checkbox' class='fancy' id='check-flooded'/><span></span> <label for='check-flooded' title="Edit the flooded room"><span class='hotkey'>F</span>looded</label>
+				<input type='checkbox' class='fancy' id='check-sync' checked/><span></span> <label for='check-sync' title="Edit both flooded and drained together"><span class='hotkey'>S</span>ync</label>
+				<input type='checkbox' class='fancy' id='check-item'/><span></span> <label for='check-item' title="Edit items (instead of tiles)"><span class='hotkey'>E</span>dit Items</label></p>
+			<div id='room-show'>
+				<canvas id='room-tiles' width='320' height='240'></canvas>
+				<div id='room-items'></div>
+				<div id='room-tile-loc'></div>
+				<div id='room-show-cover'></div>
+			</div>
+			<ul id='list-tile-select'></ul>
+			<p id='item-edit'>
+				<label for='sel-items'>Item:</label>
+				<select id='sel-items'>
+					<optgroup label="Room Structures">
+						<option value='player'>player</option>
+						<option value='lock'>lock</option>
+						<option value='yield'>fissure</option>
+					</optgroup>
+					<optgroup label="Items">
+						<option value='box'>box</option>
+						<option value='key'>key</option>
+						<option value='generic'>oobleck</option>
+						<option value='fan'>fan</option>
+					</optgroup>
+					<optgroup label="Containers">
+						<option value='chest'>chest</option>
+						<option value='cauldron'>cauldron</option>
+					</optgroup>
+					<optgroup label="Goals">
+						<option value='crystal'>crystal</option>
+						<option value='diamond'>diamond</option>
+						<option value='ruby'>ruby</option>
+					</optgroup>
+				</select>
+				<button id='btn-create-item' title="Create a new item">Create</button>
+				<input type='checkbox' class='fancy' id='check-global'/><span></span> <label for='check-global'>Global</label>
+				<label for='in-item-data'>Data:</label> <input type='text' id='in-item-data'/>
+			</p>
+		</div>
+		<div id='loading-cover'>Loading...</div>
+		<input class='internal' type='file' id='file-dialog' accept=".lua"/>
+		<input class='internal' type='file' id='folder-dialog' nwdirectory />
+	</div></body>
+</html>

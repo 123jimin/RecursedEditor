@@ -1,0 +1,16 @@
+{
+	"name": "recursed-map-editor",
+	"main": "ui/index.html",
+	"window": {
+		"icon": "img/icon.png",
+		"width": 640,
+		"height": 640,
+		"toolbar": false
+	},
+	"webkit": {
+		"plugin": false,
+		"java": false,
+		"page-cache": false
+	},
+	"chromium-args": "--disable-devtools"
+}
